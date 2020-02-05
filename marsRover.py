@@ -28,13 +28,13 @@ class Rover:
     self._y = y
     self._direction = direction
 
+  def __str__(self):
+    return '%d %d %c' % (self._x, self._y, self._direction)
+
   def move(self):
     vecor = self.__mapMove[self._direction]
     self._x += vecor[0]
     self._y += vecor[1]
-
-  def print_status(self):
-    print self._x, self._y, self._direction
 
   def turn_left(self):
     self._direction = self.__mapLeft[self._direction]
@@ -66,5 +66,5 @@ if __name__ == '__main__':
         exit(-1)
       rover = Rover(int(position[0]), int(position[1]), position[2])
       rover.interpreter(instruction)
-      rover.print_status()
+      print(rover)
       del rover
