@@ -1,9 +1,6 @@
 import sys
 
 class Rover:
-  _x = 0
-  _y = 0
-  _direction = 'N'
   __mapLeft = {
     'N': 'W',
     'W': 'S',
