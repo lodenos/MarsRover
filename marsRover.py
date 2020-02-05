@@ -55,7 +55,6 @@ if __name__ == '__main__':
   if len(sys.argv) < 2:
     print "Argument Error"
     exit(-1)
-  listRover = []
   with open(sys.argv[1]) as file:
     data = file.read().split('\n')
     data = [data[2::2], data[1::2]]
