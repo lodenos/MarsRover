@@ -26,9 +26,6 @@ class Rover:
   def __str__(self):
     return '%d %d %c' % (self._x, self._y, self._direction)
 
-  def interpreter(self, instruction):
-    [self.__instruction[index](self) for index in instruction]
-
   def move(self):
     vecor = self.__mapMove[self._direction]
     self._x += vecor[0]
@@ -45,3 +42,6 @@ class Rover:
     'R': turn_right,
     'L': turn_left
   }
+
+  def interpreter(self, instruction):
+    [self.__instruction[index](self) for index in instruction]
